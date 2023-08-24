@@ -1,0 +1,52 @@
+.newdiv{
+    transition: 0.3s all ease-in-out;
+    width: 100%;
+}
+
+.bgimage{
+    background-image: url(bg.jpg);
+}
+
+.bgimage2{
+  background-image: url(bg2.jpg);
+}
+
+.slidee{
+    opacity: 0;
+    transition: 1s all ease;
+    position: relative;
+    transform: translateX(-40px);
+  }
+  .slidee.active{
+    opacity: 1;
+    transition: 1s all ease;
+    transform: translateX(0);
+  }
+
+.cardcont{
+    opacity: 100%;
+    margin-top: 0px;
+    flex: 90%;
+    max-width: 90%;
+    animation: pop;
+    animation-duration: 1s;
+}
+@keyframes pop {
+    from   {          margin-top: 50px;
+    }
+    to {      margin-top: 0px;
+    }
+  }
+
+.upslide{
+    opacity: 100%;
+    margin-top: 0px;
+    animation: pop;
+    animation-duration: 1s;
+}
+@keyframes pop {
+    from   {          margin-top: 50px;
+    }
+    to {      margin-top: 0px;
+    }
+  }

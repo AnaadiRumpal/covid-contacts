@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COVID-19 Dashboard</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <style>
+    #map {
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+    <h1>COVID-19 Dashboard</h1>
+
+    <h2>Cases Fluctuations</h2>
+    <canvas id="lineChart" width="400" height="200"></canvas>
+    <h2>Global COVID-19 Statistics</h2>
+    <div>
+        <label for="countrySelect">Select a Country:</label>
+        <select id="countrySelect"></select>
+        <button id="fetchCountryData">Fetch Data</button>
+    </div>
+    <div id="countryData" style="margin-top: 20px;"></div>
+  
