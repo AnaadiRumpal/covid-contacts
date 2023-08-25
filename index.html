@@ -33,25 +33,25 @@
 
 </head>
 <body>
-    <div class="flex flex-row justify-items-stretch">
+    <div class="flex flex-col sm:flex-row w-full">
 
     
-        <div class="sidebar flex-none  top-0 bottom-0 w-1/6  duration-1000 p-3   text-center bg-gray-900 shadow">
+        <div class="sidebar flex-none  top-0 bottom-0   duration-1000 p-3   text-center bg-gray-900 shadow">
             <div class="text-gray-100 text-xl">
                 
                 <div>
                     
-                    <div id ="btn1"class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-cyan-800 hover:bg-blue-600  " onclick="showcontact()">
+                    <div id ="btn1"class="p-2.5 m-3 flex  justify-center rounded-md  duration-300 cursor-pointer bg-cyan-800 hover:bg-blue-600  " onclick="showcontact()">
                         <i class="bi bi-house-door-fill"></i>
-                        <span class="text-[15px] ml-4 text-gray-200">Contact Page</span>
+                        <span class="text-sm md:text-base sm:text-lg ml-4  text-gray-200">Contact Page</span>
                     </div>
-                    <div id ="btn2" class="p-2.5 mt-2 flex items-center  rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600" onclick="showcharts()">
+                    <div id ="btn2" class="p-2.5 m-3 flex  justify-center  rounded-md duration-300 cursor-pointer  hover:bg-blue-600" onclick="showcharts()">
                         <i class="bi bi-bookmark-fill"></i>
-                        <span class="text-[15px] ml-4 text-gray-200">Covid Charts</span>
+                        <span class="text-sm md:text-base sm:text-lg ml-4 text-gray-200">Covid Charts</span>
                     </div>
-                    <hr class="my-12 text-gray-600">
-                    <div class="p-2.5 m-3 flex items-center rounded-full duration-300 cursor-pointer bg-cyan-800 hover:bg-blue-600" onclick="openwebsite()">
-                        <span class="text-[15px] ml-4 text-gray-200">Anaadi Rumpal</span>
+                    <hr class="my-4 sm:my-12 text-gray-600">
+                    <div class="p-2.5 m-3 flex  justify-center rounded-full duration-300 cursor-pointer bg-cyan-800 hover:bg-blue-600" onclick="openwebsite()">
+                        <span class="text-sm md:text-base sm:text-lg ml-4 text-gray-200">Anaadi Rumpal</span>
                     </div>
 
 
@@ -60,7 +60,7 @@
                 </div>
             </div>
         </div>
-        <div  class="float float-col w-5/6">
+        <div  class="flex float-col w-full sm:w-full">
             <div id ="contcont" class=" flex flex-col justify-center items-center w-full bgimage bg-fixed bg-cover ">
 
                 <div class="p-12 flex-col flex w-full items-center  ">
@@ -69,21 +69,21 @@
                     </button>
                 </div>
                 
-                <div class="p-12 flex-col flex  items-center  ">
-                    <div class="cardcont duration-75 flex flex-col w-2/3 backdrop-blur-xl items-center bg-white/80 rounded-xl ">
+                <div class=" p-4 md:p-8 sm:p-8  flex-col flex justify-center items-center  ">
+                    <div class="cardcont duration-75 flex flex-col w-full sm:w-2/3 backdrop-blur-xl items-center bg-white/80 rounded-xl ">
                         <p  class=" text-1xl font-semibold p-6"> Hello, I'm Anaadi Rumpal</p>
                         <p  class="  font-normal p-6"> This is a project made for taiyo.ai which imitates the working of a contact page on our mobile.<br><br>Here, you can create a contact, edit, search or delete it.<br><br><br> To test the working, please insert new contacts and test functionalities or click this button to automatically add 10 contacts.</p>
     
     
                         
-                        <button id="autoadd" onclick="autoadd()" class="pl-3 pr-3 pt-2 pb-2 m-4  rounded-full w-1/4 text-white bg-sky-400 hover:bg-sky-500">auto add</button>
+                        <button id="autoadd" onclick="autoadd()" class="pl-3 pr-3 pt-2 pb-2 m-4 text-sm md:text-base sm:text-lg  rounded-full w-1/4 text-white bg-sky-400 hover:bg-sky-500">auto add</button>
             
                     </div>
                 </div>
     
     
-                <div class="p-20 flex-col flex  items-center  ">
-                    <div class="cardcont duration-75 flex flex-col w-2/3 backdrop-blur-xl items-center bg-white/80 rounded-xl ">
+                <div class="p-4 md:p-8 sm:p-12 flex-col flex  items-center  ">
+                    <div class="cardcont duration-75 flex flex-col w-full sm:w-2/3 backdrop-blur-xl items-center bg-white/80 rounded-xl ">
                         <p  class=" text-2xl font-semibold p-6"> CREATE A CONTACT</p>
     
                         <form id="crtfrm" class="flex flex-row justify-center flex-wrap pl-12 pr-12 w-full" name="createform" onsubmit="createContact()" >
@@ -109,7 +109,7 @@
                     
                 </table>
     
-                <div id ="allcontdiv" class = " mb-40 overflow-visible p-8 gap-y-4 slidee duration-75  flex flex-col w-2/3 backdrop-blur-xl items-center bg-white/80 rounded-xl ">
+                <div id ="allcontdiv" class = " mb-40 overflow-visible w-4/5 gap-y-4 slidee duration-75  flex flex-col p-4 md:p-8 sm:p-12 backdrop-blur-xl items-center bg-white/80 rounded-xl ">
                     <p  class=" text-2xl font-semibold p-6"> CONTACT LIST</p>
                     <div class="flex flex-row slide backdrop-blur-md p-2 w-full bg-white/80 duration-150 rounded-full hover:shadow-xl focus:outline-slate-400 focus:shadow-sm focus:bg-white text-slate-400 ">
                         <form id="search" onsubmit="return false;" class=" flex flex-row flex-wrap  pl-2 pr-2 w-full" name="search"  >
@@ -131,17 +131,18 @@
             <!-- ------------------------------------------------------------------------------------------ -->
     
             
-            <div  id ="charts" class=" hidden flex-col justify-center items-center w-full bgimage2 bg-fixed bg-cover ">
+            <div  id ="charts" class=" hidden  flex-col justify-center items-center w-full bgimage2 bg-fixed bg-cover ">
 
         
-                <div class="p-12 flex-col flex w-full items-center  ">
-                    <button class=" duration-200 ease-in-out flex flex-col w-1/2 rounded-full backdrop-blur-xl items-center bg-gray-900/30 hover:bg-gray-900/80 hover:p-2 hover:w-2/3 hover:text-lg  " onclick="showcontact()">
+                <div class="p-4 md:p-8 sm:p-12 flex-col flex w-full items-center  ">
+
+                    <button class=" duration-200 ease-in-out flex flex-col w-3/5 rounded-full backdrop-blur-xl items-center bg-gray-900/30 hover:bg-gray-900/80 hover:p-2 hover:w-2/3 hover:text-lg  " onclick="showcontact()">
                         <p  class=" text-md text-white font-semibold p-6"> GO TO PROJECT 1 - CONTACTS APPLICATION</p>                
                     </button>
                 </div>
 
-                <div class="p-8 flex-col flex  items-center  ">
-                    <div class="cardcont duration-75 flex flex-col w-4/5 backdrop-blur-xl items-center bg-white/80 rounded-xl ">
+                <div class="p-4 md:p-8 sm:p-8 flex-col flex  items-center  ">
+                    <div class="cardcont duration-75 flex flex-col w-full backdrop-blur-xl items-center bg-white/80 rounded-xl ">
                         <p  class=" text-2xl font-semibold p-6"> COVID-19 DASHBOARD</p>
                         <p  class=" text-base font-normal p-6"> This part of the websites simulates the graph on coronavirus cases. Below we can find covid statistics for every country.</p>
 
@@ -149,30 +150,30 @@
                     </div>
                 </div>
         
-                <div class="p-12 flex-col  flex w-full items-center  ">
-                    <div class="cardcont duration-75 p-8 flex flex-col w-full backdrop-blur-xl items-center bg-white/80 rounded-xl ">
+                <div class="p-4 md:p-10 sm:p-12 flex-col  flex w-full items-center  ">
+                    <div class="cardcont duration-75 p-3 flex flex-col w-full backdrop-blur-xl items-center bg-white/80 rounded-xl ">
                         <p  class=" text-2xl font-semibold p-4 pb-8"> Cases Fluctuations</p>
                         <canvas id="lineChart" width="400" height="200"></canvas>
         
                     </div>
                 </div>
         
-                <div class="p-24 pt-12 flex-col flex w-full items-center  ">
-                    <div class="cardcont duration-75 p-8  flex flex-col w-full backdrop-blur-xl  bg-white/80 rounded-xl ">
+                <div class="p-4 md:p-10 sm:p-12 flex-col flex w-full items-center  ">
+                    <div class="cardcont duration-75 p-3  flex flex-col w-full backdrop-blur-xl  bg-white/80 rounded-xl ">
                         <p  class=" text-2xl text-center font-semibold p-4 pb-8"> Global COVID-19 Statistics</p>
-                        <div class="w-full p-4 gap-4 flex-row items-center rounded-full  text-lg">
-                            <label for="countrySelect"  >  Select a Country: &nbsp;</label>
-                            <select id="countrySelect"  class="bg-white  rounded-full p-2">select country</select>
-                            <button id="fetchCountryData" class="p-1.5  rounded-full w-1/4 text-white bg-sky-400 hover:bg-sky-500" >Fetch Data</button>
+                        <div class="w-full p-4 gap-4 flex flex-col  sm:flex-row items-center justify-center rounded-full  text-lg">
+                            <div for="countrySelect" class="text-center w-full sm:w-1/2  " >  Select a Country:</div>
+                            <div class="w-full"><select id="countrySelect"  class="bg-white w-full rounded-full p-2">select country</select></div>
+                            <button id="fetchCountryData" class="p-1.5  rounded-full w-full sm:w-1/3 text-white bg-sky-400 hover:bg-sky-500" >Fetch Data</button>
                         </div>
                         <div id="countryData" style="margin-top: 20px;"></div>
         
                         
-                        <div id="stats" class="  flex  flex-wrap  flex-row">
+                        <div id="stats" class="">
                             <div class=" flex w-1/2 p-2">
                                 <div class="flex-col w-full p-3  rounded-lg">
                                     <div class="flex  mb-1">
-                                        <p id = "countryhead"class="text-3xl font-bold text-black "></p>
+                                        <p id = "countryhead"class="text-2xl sm:text-3xl font-bold text-black "></p>
                                     </div>
                                     <div class="w-full  rounded-full  bg-gray-700">
                                         <!-- <img src="${country.countryInfo.flag}" alt="${country.country}" width="200">                     -->
@@ -180,7 +181,7 @@
                                 </div>
                             </div>
                             
-                            <div class="flex flex-col w-1/2 p-2">
+                            <div class="flex flex-col w-full sm:w-1/2 p-2">
                                 <div class="flex-col w-full p-3 bg-white rounded-t-lg rounded-b-none overflow-hidden">
                                     <div class="flex justify-left  mb-1">
                                         <span id = "testsnum" class="text-xl font-medium text-black ">Tests : 224928 &nbsp; &nbsp;</span>
@@ -205,7 +206,7 @@
         
                             </div>
         
-                            <div class="flex w-1/2 p-2">
+                            <div class="flex w-full sm:w-1/2 p-2">
                                 <div class="flex-col flex w-full p-3 justify-between   rounded-lg">
                                     <div class="flex  ">
                                         <span id="popact" class="text-xl  font-medium text-black ">Population : 40754388 <br> Active : 11648</span>
@@ -216,7 +217,7 @@
         
                             </div>
         
-                            <div class="flex w-1/2 p-2">
+                            <div class="flex w-full sm:w-1/2 p-2">
                                 <div class="flex-col w-full p-3 bg-white rounded-lg">
                                     <div class="flex justify-between  mb-1">
                                         <span id ="activenum"class="text-xl font-medium text-black ">Active : 11648</span>
@@ -229,7 +230,7 @@
         
                             </div>
         
-                            <div class="flex  w-1/2 p-2">
+                            <div class="flex  w-full sm:w-1/2 p-2">
                                 <div class="flex-col w-full p-3 bg-white rounded-lg">
                                     <div class="flex justify-between  mb-1">
                                         <span id="deathsnum" class="text-xl font-medium text-black ">Deaths : 7942</span>
@@ -242,7 +243,7 @@
         
                             </div>
         
-                            <div class="flex  w-1/2 p-2">
+                            <div class="flex w-full sm:w-1/2 p-2">
                                 <div class="flex-col w-full p-3 bg-white rounded-lg">
                                     <div class="flex justify-between  mb-1">
                                         <span id ="recovnum"class="text-xl font-medium text-black ">Recovered : 205338</span>
@@ -360,7 +361,7 @@
             const activebar = document.getElementById("activebar");
     
             const stats = document.getElementById("stats");
-            stats.className = " flex  flex-wrap  flex-row hidden";
+            stats.className = " flex  flex-wrap  flex-col sm:flex-row hidden";
     
             
     
@@ -370,7 +371,7 @@
               const country = countriesData.find(country => country.country === selectedCountry);
               if (country) {
                 
-                stats.className = " flex upslide bg-white/60 flex-wrap rounded-xl flex-row block";
+                stats.className = " flex upslide bg-white/60 flex-wrap rounded-xl flex-col sm:flex-row block";
     
     
     
