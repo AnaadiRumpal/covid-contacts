@@ -49,10 +49,10 @@ function slidee() {
     charts.className = " hidden flex-col justify-center items-center w-full bgimage2 bg-fixed bg-cover ";
 
     let btn1 = document.getElementById("btn1");
-    btn1.className = "p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-cyan-800 hover:bg-blue-600 ";
+    btn1.className = "p-2.5 m-3 flex  justify-center rounded-md  duration-300 cursor-pointer bg-cyan-800 hover:bg-blue-600 ";
 
     let btn2 = document.getElementById("btn2");
-    btn2.className = "p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600 ";
+    btn2.className = "p-2.5 m-3 flex  justify-center rounded-md  duration-300 cursor-pointer hover:bg-blue-600 ";
 }
 
 function showcharts()
@@ -63,10 +63,10 @@ function showcharts()
     let charts = document.getElementById("charts");
     charts.className = " flex flex-col justify-center items-center w-full bgimage2 bg-fixed bg-cover ";
     let btn1 = document.getElementById("btn1");
-    btn1.className = "p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600 ";
+    btn1.className = "p-2.5 m-3 flex  justify-center rounded-md  duration-300 cursor-pointer hover:bg-blue-600 ";
 
     let btn2 = document.getElementById("btn2");
-    btn2.className = "p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-cyan-800 hover:bg-blue-600 ";
+    btn2.className = "p-2.5 m-3 flex  justify-center rounded-md  duration-300 cursor-pointer bg-cyan-800 hover:bg-blue-600 ";
 
     
 }
