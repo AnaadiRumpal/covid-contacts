@@ -160,28 +160,28 @@ function insertDiv(name,phone)
     const editb = document.createElement("button");
     editb.onclick = function(){showEditBox(name)};
     editb.className = " p-2  ml-2 grow-0 ";
-    editb.innerHTML = '<i class="bi bi-pencil-square hover:text-gray-500 text-2xl"></i>';
+    editb.innerHTML = '<i class="bi bi-pencil-square text-gray-500 hover:text-black text-2xl"></i>';
 
     const deleteb = document.createElement("button");
     deleteb.onclick = function(){deleteThisRow(name)};
     deleteb.className = "p-2  ml-2 grow-0";
-    deleteb.innerHTML = '<i class="bi bi-x-circle hover:text-gray-500 text-2xl"></i>    ';
+    deleteb.innerHTML = '<i class="bi bi-x-circle text-gray-500 hover:text-black text-2xl"></i>    ';
 
     const viewb = document.createElement("button");
     viewb.onclick = function(){viewDetails(name,divindex)};
     viewb.className = "p-2 ml-2 grow-0";
-    viewb.innerHTML = ' <i class="bi bi-info-circle hover:text-gray-500 text-2xl"></i>';
+    viewb.innerHTML = ' <i class="bi bi-info-circle text-gray-500 hover:text-black text-2xl"></i>';
 
 
 
     const newdiv = document.createElement("div");
-    newdiv.className = "newdiv flex flex-row p-6  rounded bg-white/80 text-lg transition ease-in-out";
+    newdiv.className = "newdiv flex flex-col sm:flex-row p-2 sm:p-6  rounded bg-white/80 text-lg transition ease-in-out";
     const insidenewdiv = document.createElement("div");
-    insidenewdiv.className = "insidenewdiv flex items-center pl-12 basis-3/5";
+    insidenewdiv.className = "insidenewdiv flex items-center pl-4 sm:pl-12 w-full sm:basis-3/5";
     insidenewdiv.innerHTML = name + "&emsp; &emsp; "  +phone  ;
 
     const sinsidenewdiv = document.createElement("div");
-    sinsidenewdiv.className = " sinsidenewdiv basis-2/5 ";
+    sinsidenewdiv.className = " sinsidenewdiv w-full flex justify-between sm:basis-2/5 ";
     sinsidenewdiv.appendChild(editb);
     sinsidenewdiv.appendChild(deleteb);
     sinsidenewdiv.appendChild(viewb);
@@ -226,13 +226,13 @@ function showEditBox(name)
 
     const box = '<form id="editform" class="flex flex-row flex-wrap p-4 rounded-lg bg-gray-200 w-full" name="editform" action="/action_page.php"><div class="w-1/2 pt-4 "> <div class="">User name: </div> </div><div class="w-1/2 pt-4 "> <input type="text" value = "frh" name="uname" class="backdrop-blur-md p-2 w-full bg-white/80 rounded-full  focus:outline-slate-400 focus:shadow-sm focus:bg-white text-slate-400" ></div><div class="w-1/2 pt-4 "> <div class="">Phone no: </div> </div><div class="w-1/2 pt-4 "> <input type="number" name="phone" value = "9999999999" class="backdrop-blur-md p-2 w-full bg-white/80 rounded-full  focus:outline-slate-400 focus:shadow-sm focus:bg-white text-slate-400" ></div><div class="w-1/2 pt-4 "> <div class="">Mail:  </div> </div><div class="w-1/2 pt-4 "> <input type="text" name="mail" value = "frh@egfv.rs" class="backdrop-blur-md p-2 w-full bg-white/80 rounded-full  focus:outline-slate-400 focus:shadow-sm focus:bg-white text-slate-400" ></div><div class="w-1/2 pt-4 "> <div class="">City:</div> </div><div class="w-1/2 pt-4 pb-4"> <input type="text"  value = "frh" name="city" class="backdrop-blur-md p-2 w-full bg-white/80 rounded-full  focus:outline-slate-400 focus:shadow-sm focus:bg-white text-slate-400" ></div><p id="alerttt" class=" text-red-700"></p></form>';
     newdiv[divindex].querySelector(".insidenewdiv").innerHTML = box;
-    newdiv[divindex].className ='newdiv flex flex-row p-6  rounded bg-white border-b-4 border-t-4  border-gray-500 text-lg transition ease-in-out';
+    newdiv[divindex].className ='newdiv flex flex-col sm:flex-row p-2 sm:p-6  rounded bg-white border-b-4 border-t-4  border-gray-500 text-lg transition ease-in-out';
 
 
     const editb = document.createElement("button");
     editb.onclick = function(){updateContact(divindex)};
     editb.className = " p-2  ml-2 grow-0 ";
-    editb.innerHTML = '<i class="bi bi-check-circle hover:text-gray-500 text-2xl"></i>';
+    editb.innerHTML = '<i class="bi bi-check-circle text-gray-500 hover:text-black text-2xl"></i>';
 
     
 
@@ -277,36 +277,36 @@ function updateContact(divindex){
     {
         if(confirm("Are you sure, you want to edit contact?"))
         {   contacts[divindex] = formContact;
-            newdiv[divindex].className = "newdiv flex flex-row p-6  rounded bg-white/80 text-lg transition ease-in-out";
+            newdiv[divindex].className = "newdiv flex flex-col sm:flex-row p-2 sm:p-6  rounded bg-white/80 text-lg transition ease-in-out";
 
 
 
             const editb = document.createElement("button");
             editb.onclick = function(){showEditBox(uname)};
             editb.className = " p-2  ml-2 grow-0 ";
-            editb.innerHTML = '<i class="bi bi-pencil-square hover:text-gray-500 text-2xl"></i>';
+            editb.innerHTML = '<i class="bi bi-pencil-square text-gray-500 hover:text-black text-2xl"></i>';
 
             const deleteb = document.createElement("button");
             deleteb.onclick = function(){deleteThisRow(uname)};
             deleteb.className = "p-2  ml-2 grow-0";
-            deleteb.innerHTML = '<i class="bi bi-x-circle hover:text-gray-500 text-2xl"></i>    ';
+            deleteb.innerHTML = '<i class="bi bi-x-circle text-gray-500 hover:text-black text-2xl"></i>    ';
 
             const viewb = document.createElement("button");
             viewb.onclick = function(){viewless(uname)};
             viewb.className = "p-2 ml-2 grow-0";
-            viewb.innerHTML = ' <i class="bi bi-info-circle-fill hover:text-gray-500 text-2xl"></i>';
+            viewb.innerHTML = ' <i class="bi bi-info-circle-fill text-gray-500 hover:text-black text-2xl"></i>';
 
 
 
 
 
             const insidenewdiv = document.createElement("div");
-            insidenewdiv.className = "insidenewdiv flex items-center pl-12 basis-3/5";
+            insidenewdiv.className = "insidenewdiv flex items-center pl-4 sm:pl-12 w-full sm:basis-3/5";
             insidenewdiv.innerHTML = "Username: " + uname + "<br><br>" + "Phone: " + phone +  "<br><br>" + "Mail: " + mail + "<br><br>" +"City: " + city; 
 
 
             const sinsidenewdiv = document.createElement("div");
-            sinsidenewdiv.className = " sinsidenewdiv basis-2/5 ";
+            sinsidenewdiv.className = " sinsidenewdiv w-full flex justify-between sm:basis-2/5 ";
             sinsidenewdiv.appendChild(editb);
             sinsidenewdiv.appendChild(deleteb);
             sinsidenewdiv.appendChild(viewb);
@@ -419,22 +419,22 @@ function viewDetails(name,divindex)
     }
 
     newdiv[divindex].querySelector(".insidenewdiv").innerHTML = "Username: " + uname + "<br><br>" + "Phone: " + phone +  "<br><br>" + "Mail: " + mail + "<br><br>" +"City: " + city; 
-    newdiv[divindex].className = "newdiv flex flex-row p-6  rounded bg-white/80 text-lg transition ease-in-out";
+    newdiv[divindex].className = "newdiv flex flex-col sm:flex-row p-2 sm:p-6  rounded bg-white/80 text-lg transition ease-in-out";
 
     const editb = document.createElement("button");
     editb.onclick = function(){showEditBox(name)};
     editb.className = " p-2  ml-2 grow-0 ";
-    editb.innerHTML = '<i class="bi bi-pencil-square hover:text-gray-500 text-2xl"></i>';
+    editb.innerHTML = '<i class="bi bi-pencil-square text-gray-500 hover:text-black text-2xl"></i>';
 
     const deleteb = document.createElement("button");
     deleteb.onclick = function(){deleteThisRow(name)};
     deleteb.className = "p-2  ml-2 grow-0";
-    deleteb.innerHTML = '<i class="bi bi-x-circle hover:text-gray-500 text-2xl"></i>    ';
+    deleteb.innerHTML = '<i class="bi bi-x-circle text-gray-500 hover:text-black text-2xl"></i>    ';
 
     const viewb = document.createElement("button");
     viewb.onclick = function(){viewless(name)};
     viewb.className = "p-2 ml-2 grow-0";
-    viewb.innerHTML = ' <i class="bi bi-info-circle-fill hover:text-gray-500 text-2xl"></i>';
+    viewb.innerHTML = ' <i class="bi bi-info-circle-fill text-gray-500 hover:text-black text-2xl"></i>';
 
     newdiv[divindex].querySelector(".sinsidenewdiv").innerHTML = "";
     newdiv[divindex].querySelector(".sinsidenewdiv").appendChild(editb);
@@ -476,22 +476,22 @@ function viewless(name){
 
     newdiv[divindex].querySelector(".insidenewdiv").innerHTML = uname + "&emsp;&emsp;" + phone ;
 
-    newdiv[divindex].className = "newdiv flex flex-row p-6  rounded bg-white/80 text-lg transition ease-in-out";
+    newdiv[divindex].className = "newdiv flex flex-col sm:flex-row p-2 sm:p-6  rounded bg-white/80 text-lg transition ease-in-out";
 
     const editb = document.createElement("button");
     editb.onclick = function(){showEditBox(name)};
     editb.className = " p-2  ml-2 grow-0 ";
-    editb.innerHTML = '<i class="bi bi-pencil-square hover:text-gray-500 text-2xl"></i>';
+    editb.innerHTML = '<i class="bi bi-pencil-square text-gray-500 hover:text-black text-2xl"></i>';
 
     const deleteb = document.createElement("button");
     deleteb.onclick = function(){deleteThisRow(name)};
     deleteb.className = "p-2  ml-2 grow-0";
-    deleteb.innerHTML = '<i class="bi bi-x-circle hover:text-gray-500 text-2xl"></i>    ';
+    deleteb.innerHTML = '<i class="bi bi-x-circle text-gray-500 hover:text-black text-2xl"></i>    ';
 
     const viewb = document.createElement("button");
     viewb.onclick = function(){viewDetails(name, divindex) } ;
     viewb.className = " p-2  ml-2 grow-0";
-    viewb.innerHTML = ' <i class="bi bi-info-circle hover:text-gray-500 text-2xl"></i>';
+    viewb.innerHTML = ' <i class="bi bi-info-circle text-gray-500 hover:text-black text-2xl"></i>';
 
     newdiv[divindex].querySelector(".sinsidenewdiv").innerHTML = "";
     newdiv[divindex].querySelector(".sinsidenewdiv").appendChild(editb);
