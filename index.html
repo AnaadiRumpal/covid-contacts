@@ -42,12 +42,13 @@
                 <div>
                     
                     <div id ="btn1"class="p-2.5 m-3 flex  justify-center rounded-md  duration-300 cursor-pointer bg-cyan-800 hover:bg-blue-600  " onclick="showcontact()">
-                        <i class="bi bi-house-door-fill"></i>
+                        <i class="bi bi-person-rolodex"></i>
                         <span class="text-sm md:text-base sm:text-lg ml-4  text-gray-200">Contact Page</span>
                     </div>
                     <div id ="btn2" class="p-2.5 m-3 flex  justify-center  rounded-md duration-300 cursor-pointer  hover:bg-blue-600" onclick="showcharts()">
-                        <i class="bi bi-bookmark-fill"></i>
-                        <span class="text-sm md:text-base sm:text-lg ml-4 text-gray-200">Covid Charts</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-virus2" viewBox="0 0 16 16">
+                            <path d="M8 0a1 1 0 0 0-1 1v1.143c0 .557-.407 1.025-.921 1.24-.514.214-1.12.162-1.513-.231l-.809-.809a1 1 0 1 0-1.414 1.414l.809.809c.394.394.445.999.23 1.513C3.169 6.593 2.7 7 2.144 7H1a1 1 0 0 0 0 2h1.143c.557 0 1.025.407 1.24.921.214.514.163 1.12-.231 1.513l-.809.809a1 1 0 0 0 1.414 1.414l.809-.809c.394-.394.999-.445 1.513-.23.514.214.921.682.921 1.24V15a1 1 0 1 0 2 0v-1.143c0-.557.407-1.025.921-1.24.514-.214 1.12-.162 1.513.231l.809.809a1 1 0 0 0 1.414-1.414l-.809-.809c-.393-.394-.445-.999-.23-1.513.214-.514.682-.921 1.24-.921H15a1 1 0 1 0 0-2h-1.143c-.557 0-1.025-.407-1.24-.921-.214-.514-.162-1.12.231-1.513l.809-.809a1 1 0 0 0-1.414-1.414l-.809.809c-.394.393-.999.445-1.513.23-.514-.214-.92-.682-.92-1.24V1a1 1 0 0 0-1-1Zm2 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM7 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm1 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm4-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/>
+                          </svg>                        <span class="text-sm md:text-base sm:text-lg ml-4 text-gray-200">Covid Charts</span>
                     </div>
                     <hr class="my-4 sm:my-12 text-gray-600">
                     <div class="p-2.5 m-3 flex  justify-center rounded-full duration-300 cursor-pointer bg-cyan-800 hover:bg-blue-600" onclick="openwebsite()">
@@ -88,13 +89,13 @@
     
                         <form id="crtfrm" class="flex flex-row justify-center flex-wrap pl-12 pr-12 w-full" name="createform" onsubmit="createContact()" >
                             <div class="w-1/2 pt-4 "> <div class="p-2">User name: </div> </div>
-                            <div class="w-1/2 pt-4 "> <input type="text" value = "Anaadi"name="uname" class="backdrop-blur-md p-2 w-full bg-white/80 rounded-full  focus:outline-slate-400 focus:shadow-sm focus:bg-white text-slate-400" ></div>
+                            <div class="w-1/2 pt-4 "> <input type="text" placeholder = "type name"name="uname" class="backdrop-blur-md p-2 w-full bg-white/80 rounded-full  focus:outline-slate-400 focus:shadow-sm focus:bg-white text-slate-400" ></div>
                             <div class="w-1/2 pt-4 "> <div class="p-2">Phone no: </div> </div>
-                            <div class="w-1/2 pt-4 "> <input type="number" value = "7986476794" name="phone" class="backdrop-blur-md p-2 w-full bg-white/80 rounded-full  focus:outline-slate-400 focus:shadow-sm focus:bg-white text-slate-400" ></div>
+                            <div class="w-1/2 pt-4 "> <input type="number" placeholder = "type phone" name="phone" class="backdrop-blur-md p-2 w-full bg-white/80 rounded-full  focus:outline-slate-400 focus:shadow-sm focus:bg-white text-slate-400" ></div>
                             <div class="w-1/2 pt-4 "> <div class="p-2">Mail:  </div> </div>
-                            <div class="w-1/2 pt-4 "> <input type="text" name="mail" value = " anaadirampal@gmail.com" class="backdrop-blur-md p-2 w-full bg-white/80 rounded-full  focus:outline-slate-400 focus:shadow-sm focus:bg-white text-slate-400" ></div>
+                            <div class="w-1/2 pt-4 "> <input type="text" name="mail" placeholder = "type mail" class="backdrop-blur-md p-2 w-full bg-white/80 rounded-full  focus:outline-slate-400 focus:shadow-sm focus:bg-white text-slate-400" ></div>
                             <div class="w-1/2 pt-4 "> <div class="p-2">City:</div> </div>
-                            <div class="w-1/2 pt-4 pb-4"> <input type="text" value = " Hoshiarpur" name="city" class="backdrop-blur-md p-2 w-full bg-white/80 rounded-full  focus:outline-slate-400 focus:shadow-sm focus:bg-white text-slate-400" ></div>
+                            <div class="w-1/2 pt-4 pb-4"> <input type="text" placeholder = "type city" name="city" class="backdrop-blur-md p-2 w-full bg-white/80 rounded-full  focus:outline-slate-400 focus:shadow-sm focus:bg-white text-slate-400" ></div>
                             <div class="w-full pt-2 pb-2 flex justify-center  "><p id="alertt" class="flex text-red-700  align-middle"></p></form></div></form>
     
                         </form>
@@ -153,12 +154,12 @@
                 <div class="p-4 md:p-10 sm:p-12 flex-col  flex w-full items-center  ">
                     <div class="cardcont duration-75 p-3 flex flex-col w-full backdrop-blur-xl items-center bg-white/80 rounded-xl ">
                         <p  class=" text-2xl font-semibold p-4 pb-8"> Cases Fluctuations</p>
-                        <canvas id="lineChart" width="400" height="200"></canvas>
+                        <canvas id="lineChart" class="w-full h-96 sm:h-full " style=" height: 400px; "></canvas>
         
                     </div>
                 </div>
         
-                <div class="p-4 md:p-10 sm:p-12 flex-col flex w-full items-center  ">
+                <div class="p-4 md:p-10 sm:p-12 mb-60 flex-col flex w-full items-center  ">
                     <div class="cardcont duration-75 p-3  flex flex-col w-full backdrop-blur-xl  bg-white/80 rounded-xl ">
                         <p  class=" text-2xl text-center font-semibold p-4 pb-8"> Global COVID-19 Statistics</p>
                         <div class="w-full p-4 gap-4 flex flex-col  sm:flex-row items-center justify-center rounded-full  text-lg">
